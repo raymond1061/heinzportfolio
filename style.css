@@ -31,17 +31,29 @@ nav {
     text-transform: uppercase;
 }
 
+.headshot {
+  display: block;
+  margin: auto;
+  transform: translateY(-100px);
+}
+
 /*--navbar stuffffff--*/
 
 nav {
     text-align: center;
-    margin-top: 30px;
-    
+    font-size: .8em;
+    margin-top: 30px
+    display: block;
+}
+
+nav li {
+  display: inline;
 }
 
 nav a {
-    padding: 20px 20px 20px 20px;
-    margin: 0;
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+    margin: 5px;
     color: #fff;
     text-decoration: none;
     background: none;
@@ -50,13 +62,13 @@ nav a {
 }
 
 nav a:hover{
-    border: 5px solid #fff; 
+    border: 5px solid #fff;
     background-image: url(assets/background_blurry.jpg);
     background-position: center bottom;
     background-attachment: fixed;
     background-size: cover;
     content: "";
-} 
+}
 
 
 /*--page layout--*/
@@ -83,17 +95,11 @@ h2 {
 }
 
 #mainlogo {
-    position: absolute;
-    font-size: 5em;
-    text-align: right; 
-    top: 30%;
-    left: 25%;
-}
-
-#mainlogo img {
-    position: absolute;
-    top: 3%;
-    left: 105%;
+  font-size: 4em;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  margin: 0;
 }
 
 footer {
@@ -134,7 +140,7 @@ main h1 {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-image: url(assets/background_blurry.jpg); 
+    background-image: url(assets/background_blurry.jpg);
     background-position: center bottom;
     background-attachment: fixed;
     background-size: cover;
@@ -142,12 +148,13 @@ main h1 {
 }
 
 .glass{
+  margin-top: 0px;
     position: relative;
-    border-bottom: 1px solid; 
+    border-bottom: 1px solid;
     border-color: #ccc;
     border-color: rgba(255, 255, 255, 0.49);
-    background-color: rgba(255, 255, 255, 0.2); 
-}
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 
 main {
     margin: 3% 25% 0 25%;
@@ -156,10 +163,13 @@ main {
 
 #outmain {
     margin: 0 25%;
-    padding: 40px 50px;
+    padding: 40px 50px 0px 40px;;
     text-align: center;
     color: white;
-    
+}
+
+#outmain h1, #outmain p {
+  text-align: left;
 }
 
 #outmain a {
@@ -168,4 +178,78 @@ main {
     font-weight: bold;
     padding: 5px;
     border: 5px solid #fff;
+}
+
+@media screen and (min-width: 450px) and (max-width: 800px)
+ {
+
+  .headshot {
+    display: none;
+  }
+
+  #mainlogo {
+    font-size: 2.5em;
+  }
+
+  main {
+      margin: 0;
+      padding: 40px 50px;
+  }
+
+  #outmain {
+    margin: 0;
+  }
+
+  .centerimg {
+    width: 50%;
+    height: 50%;
+  }
+
+}
+
+@media screen and (max-width: 450px)
+ {
+
+  .headshot {
+    display: none;
+  }
+
+  #mainlogo {
+    font-size: 2em;
+  }
+
+  nav {
+    background-color: black;
+    border: 5px solid white;
+    padding-bottom: 30px;
+  }
+
+  nav li {
+    display: block;
+  }
+
+  main {
+      margin: 0;
+      padding: 20px 25px;
+  }
+
+  #outmain {
+    margin: 0;
+  }
+
+  #outmain a {
+    display: block;
+    margin: 5px;
+    border: 2px solid white;
+  }
+
+  main img {
+    display: none;
+  }
+
+  .centerimg {
+    width: 50%;
+    height: 50%;
+  }
+
 }
